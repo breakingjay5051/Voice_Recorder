@@ -7,9 +7,9 @@ def record_audio_and_save(save_path, n_times=3):
     for i in range(n_times):
         CHUNK = 1024
         FORMAT = pyaudio.paInt16
-        CHANNELS = 2
+        CHANNELS = 1
         RATE = 44100
-        RECORD_SECONDS = 5
+        RECORD_SECONDS = 6
         WAVE_OUTPUT_FILENAME = os.path.join(save_path, f"{i}.wav")
 
         audio = pyaudio.PyAudio()
@@ -49,9 +49,9 @@ def record_background_save(save_path, n_times=3):
     for i in range(n_times):
         CHUNK = 1024
         FORMAT = pyaudio.paInt16
-        CHANNELS = 2
+        CHANNELS = 1
         RATE = 44100
-        RECORD_SECONDS = 2
+        RECORD_SECONDS = 6
         WAVE_OUTPUT_FILENAME = os.path.join(save_path, f"{i}.wav")
 
         audio = pyaudio.PyAudio()
